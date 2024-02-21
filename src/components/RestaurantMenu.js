@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+//import { useEffect, useState } from "react";
 import { json, useParams } from "react-router-dom";
 import Shimmer from "./Shimmer";
-import { MENU_API_URL } from "../../Utils/constants";
+//import { MENU_API_URL } from "../../Utils/constants";
 import useRestaurantMenu from "../../Utils/useRestaurantMenu";
 
 
