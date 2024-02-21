@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 import Header from './components/Header';
 import Body from './components/Body';
 import { RouterProvider, createBrowserRouter, Outlet } from 'react-router-dom';
-import About from './components/About';
+//import About from './components/About';
 import Contact from './components/Contact';
 import Error from './components/Error';
 import RestaurantMenu from './components/RestaurantMenu';
 
 
+//Lazt loading is not required here we are doing just for the learning purpose
+const About = lazy(() => import("./components/About"));
 
 
 
@@ -32,7 +34,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path:"/about",
-        element:<About/>
+        element: <Suspense fallback={<h1>Loading...</h1>} > <About/> </Suspense> 
       },
       {
         path:"/contact",
