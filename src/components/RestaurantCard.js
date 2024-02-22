@@ -18,10 +18,27 @@ const RestaurantCard = (props) =>{
       <h4>{props.resData.info.cuisines.join(", ")}</h4>
       <h4>{props.resData.info.avgRating} Stars</h4>
       <h4>{props.resData.info.costForTwoString}</h4>
-      <h4>{props.resData.info.lastMileTravelString}</h4>
+      <h4>{props.resData.info.sla.lastMileTravelString}</h4>
   
     </div>
     )
+  };
+
+
+
+  //HOC
+  // Input RestaurantCard  ==> RestaurantCardPromoted
+
+export const withPromotedLabel = (RestaurantCard)=>{
+  return(props)=>{
+    return(
+      <div>
+        <label className="absolute bg-gray-500 text-white m-2 p-2 rounded-lg" >Promoted</label>
+        <RestaurantCard {...props} />
+      </div>
+    )
   }
+}
+
 
   export default RestaurantCard;

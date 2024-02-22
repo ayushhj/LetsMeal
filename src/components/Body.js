@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 //import {restaurantList} from "../../Utils/mockData";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
@@ -11,6 +11,7 @@ const Body=()=>{
     const[listOfRestaurant , setListOfRestaurant] = useState([])
     const[searchText , setSearchText] = useState("")
     const[filteredRestaurant,setFilteredRestaurant] = useState([])
+    const RestaurantCardPromoted = withPromotedLabel(RestaurantCard)
 
     useEffect(()=>{
       fetchData()
@@ -76,8 +77,10 @@ const Body=()=>{
       </div>
       <div className='res-container flex flex-wrap '>
         {filteredRestaurant.map((restaurant)=>(
-          <Link to={"/restaurants/" + restaurant.info.id } >
-        <RestaurantCard key={restaurant.info.id} resData = {restaurant}  />
+          <Link to={"/restaurants/" + restaurant.info.id } key={restaurant.info.id} >
+            {restaurant.info.avgRating > 4.5 ? (<RestaurantCardPromoted resData = {restaurant} />):
+            (<RestaurantCard  resData = {restaurant}  />) }
+        
         </Link>
         ))}
       </div>
