@@ -18,7 +18,7 @@ const fetchMenu = async() =>{
  const json = await data.json();
  setResInfo(json.data)
  //console.log(json)
- //console.log(json.data.cards[2].card.card.info.name)
+ //console.log(json.data.cards[0].card.card.info.name)
  
 };
     return resInfo;
