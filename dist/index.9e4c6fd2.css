@@ -256,9 +256,19 @@ img, video {
   margin: 1rem;
 }
 
+.mx-10 {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.my-14 {
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
 }
 
 .my-4 {
@@ -279,16 +289,24 @@ img, video {
   width: 5rem;
 }
 
-.w-36 {
-  width: 9rem;
+.w-3\/12 {
+  width: 25%;
 }
 
 .w-6\/12 {
   width: 50%;
 }
 
+.w-9\/12 {
+  width: 75%;
+}
+
 .w-\[200px\] {
   width: 200px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .flex-wrap {

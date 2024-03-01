@@ -4,6 +4,7 @@ import Shimmer from "./Shimmer";
 //import { MENU_API_URL } from "../../Utils/constants";
 import useRestaurantMenu from "../../Utils/useRestaurantMenu";
 import RestaurantCatagory from "./RestaurantCatagory";
+import { useState } from "react";
 
 
 const RestaurantMenu = () =>{
@@ -11,6 +12,8 @@ const RestaurantMenu = () =>{
 const {resId} = useParams();
 
 const resInfo = useRestaurantMenu(resId);
+
+const[showIndex , setShowIndex] = useState(0)
 
 
 if(resInfo===null){
@@ -27,7 +30,13 @@ const catagories = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.
         <div className="Menu text-center " >
             <h1 className="font-bold my-6 text-2xl "  >{name}</h1> 
             <p className="font-bold text-lg"  >{cuisines.join(", ")} - {costForTwoMessage}</p>
-            {catagories.map((catagory)=>(<RestaurantCatagory data={catagory?.card?.card}   />))}
+            {catagories.map((catagory,index) =>(
+            <RestaurantCatagory 
+            key={catagory?.card?.card.title}  
+            data={catagory?.card?.card}  
+            showItems={index===showIndex?true:false}
+            setShowIndex={()=>setShowIndex(index)}
+             />))}
         </div>
     )
 
