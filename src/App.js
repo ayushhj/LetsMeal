@@ -7,7 +7,8 @@ import { RouterProvider, createBrowserRouter, Outlet } from 'react-router-dom';
 import Contact from './components/Contact';
 import Error from './components/Error';
 import RestaurantMenu from './components/RestaurantMenu';
-
+import { Provider } from 'react-redux';
+import appStore from '../Utils/appStore'
 
 //Lazt loading is not required here we are doing just for the learning purpose
 const About = lazy(() => import("./components/About"));
@@ -16,10 +17,12 @@ const About = lazy(() => import("./components/About"));
 
 const Applayout = () => {
   return (
+    <Provider store={appStore} >
     <div className='app'>
     <Header/>
     <Outlet/>
     </div>
+    </Provider>
   )
 }
 
