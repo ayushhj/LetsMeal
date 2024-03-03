@@ -1,39 +1,45 @@
-import { useState } from "react";
+//import { useState } from "react";
 import { Link } from "react-router-dom";
-import useOnlineStatus from "../../Utils/useOnlineStatus";
+import logo from "../../images/LetsMeal Logo.png"
+import { FaShoppingCart } from "react-icons/fa";
+//import useOnlineStatus from "../../Utils/useOnlineStatus";
 import { useSelector } from "react-redux";
 const Header = () => {
 
 
 //subscribing to the store using selector
 const cartItems = useSelector((store)=>store.cart.items);
-console.log(cartItems)
+//console.log(cartItems)
 
-const [btnName,setBtnName] = useState("Login")
-const onlineStatus = useOnlineStatus();
+//const [btnName,setBtnName] = useState("Login")
+//const onlineStatus = useOnlineStatus();
 
     return (
-      <div className='flex justify-between bg-orange-200 shadow-lg '>
-        <div className='logo-container'>
+      <div className='flex bg-white justify-between sticky top-0 z-50 md:h-20 h-14 shadow-lg md:px-16'>
+        <div className=''>
           <div>
-          <img className='w-20' src='https://images-platform.99static.com/v84irzbNBd5aawXGKXfH4SEjcn0=/0x0:960x960/500x500/top/smart/99designs-contests-attachments/117/117132/attachment_117132760' />
+          <img className='md:w-40 w-30 ' src={logo} />
           </div>
           </div>
           <div className='flex items-center'>
-            <ul className="flex" >
-              <li className="px-4"  >Online Status: {onlineStatus? "✅":"🔴"}</li>
-              <li className="px-4" > <Link to="/" >Home</Link></li>
-              <li className="px-4" ><Link to="/about" >About Us</Link></li>
-              <li className="px-4" ><Link to="/contact" >Contact Us</Link></li>
-              <li className="px-4" > <Link to="/Cart"  > Cart ({cartItems.length})</Link> </li>
-              <button  className=" px-4 login-btn" onClick={()=>{
+            <ul className="flex justify-center align-middle gap-3 md:mx-4 md:py-6 text-gray-600 md:text-base pt-4" >
+              {/* <li className="px-4"  >Online Status: {onlineStatus? "✅":"🔴"}</li> */}
+              <li className="md:mx-6 hover:text-orange-500 md:pt-1" > <Link to="/" >Home</Link></li>
+              <li className="md:mx-6 md:pt-1 hover:text-orange-500" ><Link to="/about" >About Us</Link></li>
+              <li className="md:mx-6 md:pt-1 hover:text-orange-500" ><Link to="/contact" >Contact Us</Link></li>
+              <li className="hover:text-orange-500 pr-1" > <Link className="flex md:mx-6 md:pt-1 items-center w-fit md:py-1 hover:text-orange-500" to="/Cart" ><FaShoppingCart />
+              <div className="text-orange-500">({cartItems.length})</div>
+              </Link> </li>
+              
+
+              {/* <button  className=" px-4 login-btn" onClick={()=>{
                 if(btnName=="Login"){
                 setBtnName("logout")}
                 else{
                   setBtnName("Login")
                 }
 
-              }} >{btnName}</button>
+              }} >{btnName}</button> */}
             </ul>
   
           </div>

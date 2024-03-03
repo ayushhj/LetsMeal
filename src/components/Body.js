@@ -40,15 +40,15 @@ const Body=()=>{
     }
     
     return(
-    <div className='body' >
-      <div className='filter flex'>
-        <div className='search m-4 p-4 ' >
-          <input type="text" 
-          className="search-box border border-black  "
+    <div className='' >
+      <div className=' md:pt-4 md:px-2 justify-center md:pl-2 flex items-center mt-2 gap-2'>
+        <div className='' >
+          <input
+          className="md:p-2 md:w-96 w-40 border rounded border-black md:me-2 hover:shadow-lg" type="text" placeholder="Search ..."
           value={searchText} 
           onChange={(e)=>{setSearchText(e.target.value)}}  ></input> 
           <button
-          className="px-4 py-2 m-4 bg-orange-200 rounded-lg"
+          className="px-4 py-2 m-4 bg-orange-200 rounded-lg hover:shadow-lg"
           onClick={()=>{
             const filteredRestaurant = listOfRestaurant.filter((res)=>
               res.info.name.toLowerCase().includes(searchText.toLowerCase())
@@ -62,7 +62,7 @@ const Body=()=>{
 
         </div>
         <div className="p-4 m-4 flex items-center" >
-        <button className= "filter-btn px-4 py-2 m-4 rounded-lg bg-gray-100 hover:bg-slate-400" 
+        <button className= "filter-btn px-4 py-2 m-4 rounded-lg bg-gray-100 hover:bg-orange-200" 
         onClick={()=>{
             const filteredList = listOfRestaurant.filter((restaurant)=>restaurant.info.avgRating > 4)
             //console.log(filteredList)
@@ -75,7 +75,7 @@ const Body=()=>{
         
        
       </div>
-      <div className='res-container flex flex-wrap '>
+      <div className='flex flex-wrap justify-center gap-3 p-2 mt-1 '>
         {filteredRestaurant.map((restaurant)=>(
           <Link to={"/restaurants/" + restaurant.info.id } key={restaurant.info.id} >
             {restaurant.info.avgRating > 4.5 ? (<RestaurantCardPromoted resData = {restaurant} />):
