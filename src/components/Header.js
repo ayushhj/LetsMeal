@@ -7,7 +7,7 @@ const Header = () => {
 
 //subscribing to the store using selector
 const cartItems = useSelector((store)=>store.cart.items);
-//console.log(cartItems)
+console.log(cartItems)
 
 const [btnName,setBtnName] = useState("Login")
 const onlineStatus = useOnlineStatus();
@@ -25,7 +25,7 @@ const onlineStatus = useOnlineStatus();
               <li className="px-4" > <Link to="/" >Home</Link></li>
               <li className="px-4" ><Link to="/about" >About Us</Link></li>
               <li className="px-4" ><Link to="/contact" >Contact Us</Link></li>
-              <li className="px-4" >Cart ({cartItems.length})</li>
+              <li className="px-4" > <Link to="/Cart"  > Cart ({cartItems.length})</Link> </li>
               <button  className=" px-4 login-btn" onClick={()=>{
                 if(btnName=="Login"){
                 setBtnName("logout")}

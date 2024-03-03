@@ -62,7 +62,7 @@ const Body=()=>{
 
         </div>
         <div className="p-4 m-4 flex items-center" >
-        <button className= "filter-btn px-4 py-2 m-4 rounded-lg bg-gray-100" 
+        <button className= "filter-btn px-4 py-2 m-4 rounded-lg bg-gray-100 hover:bg-slate-400" 
         onClick={()=>{
             const filteredList = listOfRestaurant.filter((restaurant)=>restaurant.info.avgRating > 4)
             //console.log(filteredList)
