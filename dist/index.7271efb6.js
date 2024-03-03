@@ -40088,6 +40088,9 @@ const Cart = ()=>{
     const handleClearCart = ()=>{
         dispatch((0, _cartSlice.clearCart)());
     };
+    const handleAddItem = (item)=>{
+        dispatch((0, _cartSlice.addItem)(item));
+    };
     const handleRemoveItem = (item)=>{
         //console.log(item)
         dispatch((0, _cartSlice.removeItem)(item));
@@ -40100,8 +40103,8 @@ const Cart = ()=>{
                 children: "Cart"
             }, void 0, false, {
                 fileName: "src/components/Cart.js",
-                lineNumber: 23,
-                columnNumber: 13
+                lineNumber: 26,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "w-6/12 m-auto",
@@ -40112,8 +40115,8 @@ const Cart = ()=>{
                         children: "Clear Cart"
                     }, void 0, false, {
                         fileName: "src/components/Cart.js",
-                        lineNumber: 25,
-                        columnNumber: 15
+                        lineNumber: 28,
+                        columnNumber: 9
                     }, undefined),
                     cartItems.length === 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         children: [
@@ -40121,22 +40124,25 @@ const Cart = ()=>{
                                 children: "Cart is Empty"
                             }, void 0, false, {
                                 fileName: "src/components/Cart.js",
-                                lineNumber: 32,
-                                columnNumber: 17
+                                lineNumber: 36,
+                                columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                 className: "p-2 m-2 bg-black text-white ",
-                                children: " Add items to your cart!"
-                            }, void 0, false, {
+                                children: [
+                                    " ",
+                                    "Add items to your cart!"
+                                ]
+                            }, void 0, true, {
                                 fileName: "src/components/Cart.js",
-                                lineNumber: 33,
-                                columnNumber: 17
+                                lineNumber: 37,
+                                columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Cart.js",
-                        lineNumber: 31,
-                        columnNumber: 17
+                        lineNumber: 35,
+                        columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         children: cartItems.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -40153,24 +40159,25 @@ const Cart = ()=>{
                                                         children: item.card.info.name
                                                     }, void 0, false, {
                                                         fileName: "src/components/Cart.js",
-                                                        lineNumber: 43,
-                                                        columnNumber: 13
+                                                        lineNumber: 52,
+                                                        columnNumber: 19
                                                     }, undefined),
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                                         children: [
-                                                            " - \u20B9",
+                                                            " ",
+                                                            "- \u20B9",
                                                             item.card.info.price ? item.card.info.price / 100 : item.card.info.defaultPrice / 100
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "src/components/Cart.js",
-                                                        lineNumber: 44,
-                                                        columnNumber: 13
+                                                        lineNumber: 53,
+                                                        columnNumber: 19
                                                     }, undefined)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/components/Cart.js",
-                                                lineNumber: 42,
-                                                columnNumber: 13
+                                                lineNumber: 51,
+                                                columnNumber: 17
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                                 className: "text-xs  text-gray-400",
@@ -40180,14 +40187,14 @@ const Cart = ()=>{
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/components/Cart.js",
-                                                lineNumber: 46,
-                                                columnNumber: 13
+                                                lineNumber: 61,
+                                                columnNumber: 17
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/Cart.js",
-                                        lineNumber: 41,
-                                        columnNumber: 13
+                                        lineNumber: 50,
+                                        columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         className: " w-3/12 p-4 ",
@@ -40198,11 +40205,14 @@ const Cart = ()=>{
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                                         className: "p-2 mx-10 my-14 rounded-xl bg-white text-green-500 shadow-md hover:bg-slate-400",
                                                         onClick: ()=>handleAddItem(item),
-                                                        children: " Add +"
-                                                    }, void 0, false, {
+                                                        children: [
+                                                            " ",
+                                                            "Add +"
+                                                        ]
+                                                    }, void 0, true, {
                                                         fileName: "src/components/Cart.js",
-                                                        lineNumber: 50,
-                                                        columnNumber: 14
+                                                        lineNumber: 68,
+                                                        columnNumber: 19
                                                     }, undefined),
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                                         className: "absolute mx-10 my-8 p-1 m-1 bg-black text-white ",
@@ -40210,51 +40220,51 @@ const Cart = ()=>{
                                                         children: "Remove"
                                                     }, void 0, false, {
                                                         fileName: "src/components/Cart.js",
-                                                        lineNumber: 53,
-                                                        columnNumber: 14
+                                                        lineNumber: 75,
+                                                        columnNumber: 19
                                                     }, undefined)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/components/Cart.js",
-                                                lineNumber: 49,
-                                                columnNumber: 14
+                                                lineNumber: 67,
+                                                columnNumber: 17
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                                                 className: "rounded-lg",
                                                 src: (0, _constants.IMG_CDN_URL) + item.card.info.imageId ? (0, _constants.IMG_CDN_URL) + item.card.info.imageId : ""
                                             }, void 0, false, {
                                                 fileName: "src/components/Cart.js",
-                                                lineNumber: 58,
-                                                columnNumber: 13
+                                                lineNumber: 82,
+                                                columnNumber: 17
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/Cart.js",
-                                        lineNumber: 48,
-                                        columnNumber: 13
+                                        lineNumber: 66,
+                                        columnNumber: 15
                                     }, undefined)
                                 ]
                             }, item.card.info.id, true, {
                                 fileName: "src/components/Cart.js",
-                                lineNumber: 40,
+                                lineNumber: 46,
                                 columnNumber: 13
                             }, undefined))
                     }, void 0, false, {
                         fileName: "src/components/Cart.js",
-                        lineNumber: 38,
-                        columnNumber: 17
+                        lineNumber: 44,
+                        columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Cart.js",
-                lineNumber: 24,
-                columnNumber: 13
+                lineNumber: 27,
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Cart.js",
-        lineNumber: 22,
-        columnNumber: 9
+        lineNumber: 25,
+        columnNumber: 5
     }, undefined);
 };
 _s(Cart, "ClsVU7OzYQ50hVvtHIih2dVFL+s=", false, function() {
