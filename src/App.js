@@ -12,7 +12,7 @@ import appStore from '../Utils/appStore'
 import {Cart} from './components/Cart';
 
 //Lazt loading is not required here we are doing just for the learning purpose
-const About = lazy(() => import("./components/About"));
+const Offers = lazy(() => import("./components/Offers"));
 
 
 
@@ -37,8 +37,8 @@ const appRouter = createBrowserRouter([
         element:<Body/>
       },
       {
-        path:"/about",
-        element: <Suspense fallback={<h1>Loading...</h1>} > <About/> </Suspense> 
+        path:"/Offers",
+        element: <Suspense fallback={<h1>Loading...</h1>} > <Offers/> </Suspense> 
       },
       {
         path:"/contact",

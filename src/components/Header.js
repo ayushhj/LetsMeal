@@ -25,7 +25,7 @@ const cartItems = useSelector((store)=>store.cart.items);
             <ul className="flex justify-center align-middle gap-3 md:mx-4 md:py-6 text-gray-600 md:text-base pt-4" >
               {/* <li className="px-4"  >Online Status: {onlineStatus? "✅":"🔴"}</li> */}
               <li className="md:mx-6 hover:text-orange-500 md:pt-1" > <Link to="/" >Home</Link></li>
-              <li className="md:mx-6 md:pt-1 hover:text-orange-500" ><Link to="/about" >About Us</Link></li>
+              <li className="md:mx-6 md:pt-1 hover:text-orange-500" ><Link to="/offers" >Offers</Link></li>
               <li className="md:mx-6 md:pt-1 hover:text-orange-500" ><Link to="/contact" >Contact Us</Link></li>
               <li className="hover:text-orange-500 pr-1" > <Link className="flex md:mx-6 md:pt-1 items-center w-fit md:py-1 hover:text-orange-500" to="/Cart" ><FaShoppingCart />
               <div className="text-orange-500">({cartItems.length})</div>

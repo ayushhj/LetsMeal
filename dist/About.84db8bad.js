@@ -606,11 +606,82 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const About = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: "About us page"
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "lg:mx-[20%] my-5 md:my-8 gap-7 border-2 rounded-lg p-6 ",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                    className: "text-center m-4 p-4 font-extrabold text-2xl text-gray-500",
+                    children: "Get the best offers on the food from top restaurants near you"
+                }, void 0, false, {
+                    fileName: "src/components/About.js",
+                    lineNumber: 6,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    className: "text-left text-gray-400",
+                    children: [
+                        "Get ready for a scrumptious adventure filled with unbeatable offers on your favourite foods and restaurants. Whether you're in the mood for a cheesy pizza, a sizzling burger, or a delightful bowl of pasta, now is the perfect time to satisfy your cravings while saving big.",
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/About.js",
+                            lineNumber: 7,
+                            columnNumber: 320
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/About.js",
+                            lineNumber: 8,
+                            columnNumber: 9
+                        }, undefined),
+                        "All the top-rated restaurants and popular eateries are rolling out enticing deals and discounts that are too good to resist. From mouthwatering buy-one-get-one-free offers to irresistible combo meals, there's something for everyone on Lets Meal to relish without breaking the bank.",
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/About.js",
+                            lineNumber: 9,
+                            columnNumber: 282
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/About.js",
+                            lineNumber: 10,
+                            columnNumber: 1
+                        }, undefined),
+                        "Imagine biting onto a juicy burger paired with a side of crispy fries, all at a fraction of the regular price. Or how about treating yourself to a cheesy, oven-fresh pizza with your favourite toppings without worrying about the bill? With these incredible offers, indulging in your beloved dishes has never been more budget-friendly.",
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/About.js",
+                            lineNumber: 11,
+                            columnNumber: 334
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/About.js",
+                            lineNumber: 12,
+                            columnNumber: 1
+                        }, undefined),
+                        "So, whether you're planning a cosy night in, a family feast, or a fun dinner with friends, take advantage of these fantastic deals. It's time to savour the flavours you adore without emptying your wallet. ",
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/About.js",
+                            lineNumber: 13,
+                            columnNumber: 206
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/About.js",
+                            lineNumber: 13,
+                            columnNumber: 215
+                        }, undefined),
+                        "Order now, support your local restaurants, and make every meal a delightful and cost-effective experience. Don't miss out \u2013 let your taste buds rejoice, and your savings grow with these irresistible food offers on Lets Meal!"
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/About.js",
+                    lineNumber: 7,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/About.js",
+            lineNumber: 5,
+            columnNumber: 9
+        }, undefined)
     }, void 0, false, {
         fileName: "src/components/About.js",
-        lineNumber: 3,
+        lineNumber: 4,
         columnNumber: 5
     }, undefined);
 };
