@@ -12,7 +12,7 @@ const dispatch = useDispatch();
     return (
     <div>
         {items.map((item)=> (
-            <div key={item.card.info.id} className="p-2 m-2 border-gray-200 border-b-2 text-left  flex justify-between" > 
+            <div data-testid="menuItem"  key={item.card.info.id} className="p-2 m-2 border-gray-200 border-b-2 text-left  flex justify-between" > 
             <div className="w-9/12" >
             <div className="py-2"> 
             <span className="font-bold" >{item.card.info.name}</span> 

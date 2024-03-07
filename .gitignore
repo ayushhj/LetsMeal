@@ -1,3 +1,5 @@
 /node_modules
 /.parcel-cache
 /.parcel-cache/data.mdb 
+/coverage
+/dist

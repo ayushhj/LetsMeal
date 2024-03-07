@@ -33,7 +33,7 @@ const Body=()=>{
       )
     }
 
-    if(listOfRestaurant.length===0){
+    if(listOfRestaurant?.length===0){
       return(
         <Shimmer/>
       )
@@ -44,6 +44,7 @@ const Body=()=>{
       <div className=' md:pt-4 md:px-2 justify-center md:pl-2 flex items-center mt-2 gap-2'>
         <div className='' >
           <input
+          data-testid="searchInput"
           className="md:p-2 md:w-96 w-40 border rounded border-black md:me-2 hover:shadow-lg" type="text" placeholder="Search ..."
           value={searchText} 
           onChange={(e)=>{setSearchText(e.target.value)}}  ></input> 
