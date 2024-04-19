@@ -22,7 +22,7 @@ const dispatch = useDispatch();
             </div>
             <div className=" w-3/12 p-4 ">
              <div className="absolute" > 
-             <button className="p-2 mx-10 my-14 rounded-xl bg-white text-green-500 hover:shadow-lg" 
+             <button className="p-2 mx-10 my-20 rounded-xl bg-white text-green-500 hover:shadow-lg" 
              onClick={()=>handleAddItem(item)}
              > Add +</button>
              </div>   
